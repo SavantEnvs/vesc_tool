@@ -1,0 +1,8 @@
+project: savantenvs/vesc_tool
+target: fuzz_maddy
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_maddy/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_maddy
+    libfuzzer: true
